@@ -8,6 +8,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"strings"
+	"github.com/vanilla-os/vib/api"
 )
 
 type PacmanModule struct {
