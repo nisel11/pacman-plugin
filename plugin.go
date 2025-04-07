@@ -45,7 +45,7 @@ func BuildModule(moduleInterface *C.char, _ *C.char) *C.char {
 		return C.CString(fmt.Sprintf("ERROR: %s", err.Error()))
 	}
 
-	cmd := fmt.Sprintf("pacman -Sy --noconfirm %s %s", strings.Join(module.ExtraFlags, " "), strings.Join(module.Packages, " "))
+	cmd := fmt.Sprintf("pacman -Sy --noconfirm %s %s && yes | pacman -Scc", strings.Join(module.ExtraFlags, " "), strings.Join(module.Packages, " "))
 
 	return C.CString(cmd)
 }
