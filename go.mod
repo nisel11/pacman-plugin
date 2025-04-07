@@ -1,4 +1,4 @@
-module github.com/nisel11/pacman-plugin
+module github.com/nisel11/vib-pacman
 
 go 1.24
 
